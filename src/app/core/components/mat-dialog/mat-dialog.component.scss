@@ -1,0 +1,18 @@
+@import "../../../../assets/utils.scss";
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  border: 2px solid $white;
+  border-radius: 8px;
+  height: 120px;
+  width: 300px;
+  &__button {
+    border: 1px solid $light-blue;
+  }
+
+  &__button-close {
+    background-color: $light-blue;
+  }
+}

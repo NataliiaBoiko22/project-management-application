@@ -1,0 +1,121 @@
+{
+  "welcome": {
+    "welcomeTitle": "Project management",
+    "welcomeDescription": "The project management application will help solve work tasks efficiently. Application is a digital board that provides a visual of the work you need to get done. You can move and prioritize tasks on a project board as the project evolves and changes. A project board allows you to easily see the big picture so you can prioritize tasks effectively. It’s also an effective and efficient way of managing the work of your team and keeping everyone on the same page.",
+    "startbutton": "Let start!",
+    "welcomeBenefits": "Benefits",
+    "benefitsDescriptionOne": "Get a high-level view of project progress",
+    "benefitsDescriptionTwo": "Know exactly what stage any given project is at ",
+    "benefitsDescriptionThree": "Real-time updates, problem-spotting, and problem-solving",
+    "benefitsDescriptionFour": "Know where you need to reallocate resources ",
+    "welcomeOppotunities": "Oppotunities",
+    "oppotunitiesDescriptionOne": "Create boards",
+    "oppotunitiesDescriptionTwo": "Create tasks, check done, transfer tasks",
+    "oppotunitiesDescriptionThree": "Search by tasks boards or performers",
+    "oppotunitiesDescriptionFour": "Estimate timelines, plan, monitor and track tasks",
+    "course": "ABOUT COURSE",
+    "courseInfo": "This tutorial project was developed as part of the free online course \"Javascript/Front-end Mentoring Program (in English)\" from The Rolling Scopes community. The RS School is working by the principle of \"Pay it forward.\" Everyone can study at RS School, regardless of age, professional employment, or place of residence." ,
+    
+      "developerTitle": "ABOUT DEVELOPER",
+      "devName": "Nataliia",
+      "devDescription": "Hello! I started my coding journey in august 2022 and fell in love with coding. Before that I was far from coding, but I am aimed at switching my career. I specialised in Frontend Development as I'm passionate to combine design and technical knowledge.",
+      "devContact": "Contact Me"
+
+    },
+  "header": {
+    "goToMain": "Main",
+    "settingsTitle": "Settings",
+    "addBoard": "+Board",
+    "translation": "Language",
+    "logIn": "LogIn",
+    "logOut": "LogOut"
+  },
+  "authorization": {
+    "logIn": "Log In",
+    "login": "Login",
+    "password": "Password",
+    "dontHaveAccount": "Don't have an account?",
+    "dontHaveAccountSingUp": "Sing Up!"
+  },
+  "registration": {
+    "name": "Name",
+    "signUp": "Sign Up",
+    "haveAccount": "Do you already have an account?",
+    "haveAccountLogIn": "Log In!"
+  },
+  "errors": {
+    "enterLoginEmail": "*please enter a login email",
+    "invalidLoginEmail": "*the login email is invalid",
+    "enterPassword": "*please enter a password",
+    "longerThanEight": "*your password should be longer than 8",
+    "usedSpecial": "*your password should include uppercase and lowercase letters, numbers, special character",
+    "enterName": "*please enter a name",
+    "longerThanThree": "*your name should be longer than 3",
+    "noLongerName": "*your name should be no longer than 20",
+    "onlySmallOrNumbers": "*should use only small letters or numbers",
+    "noLongerPassword": "*your password should be no longer than 20"
+  },
+  "profile": {
+    "title": "Settings",
+    "name": "Name",
+    "login": "Login",
+    "password": "Password",
+    "delete": "Delete user",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "windowData": {
+    "deleteUser": {
+      "title": "Delete User",
+      "description": "Do you really want to delete the User?"
+    },
+    "logOut": {
+      "title": "Log Out",
+      "description": "Do you really want to log out?"
+    },
+    "save": {
+      "title": "Successful!",
+      "description": "Your settings have been saved"
+    },
+    "errorHTTP": {
+      "title": "HTTP Error",
+      "description": ""
+    }
+  },
+
+  "massage": {
+    "cancel": "Cancel",
+    "confirm": "Confirm"
+  },
+  "mainPage": {
+    "mainPageTitle": "Boards",
+    "boardsFormTitle": "Create board",
+    "boardTitle": "Title",
+    "boardSelectUser": "User",
+    "createBoardButton": "Create",
+    "enterBoardTitlePlaceholder": "Enter the board title",
+    "filters": "Filters",
+    "title": "Title",
+    "boardOwner": "Board owner",
+    "none": "None",
+    "board": "Board",
+    "taskOwner": "Task owner",
+    "tasks": "Tasks"
+  },
+  "boardPage": {
+    "createColumn": "Create column",
+    "create": "Create",
+    "createTask": "Create task",
+    "columnTitle": "Column title",
+    "enterColumnTitlePlaceholder": "Enter column title",
+    "taskTitle": "Task title",
+    "enterTaskTitlePlaceholder": "Enter task title",
+    "taskDescription": "Task description",
+    "enterTaskDescriptionPlaceholder": "Enter task description",
+    "cancel": "Cancel"
+  },
+  "footer": {
+    "creator": "Creator",
+    "author": "Nataliia Boiko"
+  }
+}

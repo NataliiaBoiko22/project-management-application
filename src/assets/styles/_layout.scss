@@ -1,0 +1,28 @@
+@mixin align-center {
+  display: block;
+  margin: 10px auto;
+}
+
+@mixin responsive-grid {
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  margin: 16px;
+
+  @media (max-width: 1600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 320px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+$header-height: 80px;
+$footer-height: 80px;

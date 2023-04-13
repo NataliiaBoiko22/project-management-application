@@ -1,0 +1,111 @@
+<mat-dialog-content class="wrapper">
+  <form [formGroup]="userUpdateForm" class="settings">
+    <h2 class="settings__title">{{ "profile.title" | translate }}</h2>
+    <mat-form-field class="settings__input">
+      <mat-label for="inputName1">{{ "profile.name" | translate }}</mat-label>
+      <div [formGroup]="userUpdateForm">
+        <input
+          title="name"
+          matInput
+          formControlName="name"
+          type="text"
+          id="inputName1"
+          [formControl]="controlName"
+        />
+      </div>
+    </mat-form-field>
+    <div>
+      <mat-error *ngIf="controlName?.errors?.['required']">{{
+        "errors.enterName" | translate
+      }}</mat-error>
+      <mat-error *ngIf="controlName?.errors?.['minlength']">{{
+        "errors.longerThanThree" | translate
+      }}</mat-error>
+      <mat-error *ngIf="controlName?.errors?.['maxlength']">{{
+        "errors.noLongerThanTwentyName" | translate
+      }}</mat-error>
+      <mat-error *ngIf="controlName?.errors?.['pattern']">{{
+        "errors.onlySmallOrNumbers" | translate
+      }}</mat-error>
+    </div>
+    <mat-form-field class="settings__input">
+      <mat-label for="inputText2">{{ "profile.login" | translate }}</mat-label>
+      <div [formGroup]="userUpdateForm">
+        <input
+          title="login"
+          matInput
+          type="text"
+          formControlName="login"
+          id="inputText2"
+          [formControl]="controlLogin"
+        />
+      </div>
+    </mat-form-field>
+    <div>
+      <mat-error *ngIf="controlLogin?.errors?.['required']">{{
+        "errors.enterLoginEmail" | translate
+      }}</mat-error>
+      <mat-error *ngIf="controlLogin?.errors?.['email']">{{
+        "errors.invalidLoginEmail" | translate
+      }}</mat-error>
+    </div>
+    <br />
+    <mat-form-field class="settings__input">
+      <mat-label for="inputPassword3">{{
+        "profile.password" | translate
+      }}</mat-label>
+      <div [formGroup]="userUpdateForm">
+        <input
+          title="password"
+          matInput
+          formControlName="password"
+          type="password"
+          id="inputPassword3"
+          [formControl]="controlPassword"
+          autocomplete="new-password"
+        />
+      </div>
+    </mat-form-field>
+    <div>
+      <mat-error *ngIf="controlPassword?.errors?.['required']">{{
+        "errors.enterPassword" | translate
+      }}</mat-error>
+      <mat-error *ngIf="controlPassword?.errors?.['minlength']">{{
+        "errors.longerThanEight" | translate
+      }}</mat-error>
+      <mat-error *ngIf="controlPassword?.errors?.['minlength']">{{
+        "errors.noLongerThanTwentyPassword" | translate
+      }}</mat-error>
+      <mat-error *ngIf="controlPassword?.errors?.['pattern']">{{
+        "errors.usedUpperLowerNumberSpecial" | translate
+      }}</mat-error>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-raised-button
+    class="settings__button"
+    [mat-dialog-close]="true"
+    [disabled]="userUpdateForm.invalid"
+    (click)="changeUserData()"
+  >
+    {{ "profile.save" | translate }}
+  </button>
+  <button
+    class="settings__button-close"
+    mat-raised-button
+    [mat-dialog-close]="true"
+    (click)="openDialog()"
+  >
+    {{ "profile.delete" | translate }}
+  </button>
+  <button
+    mat-raised-button
+    mat-dialog-close
+    cdkFocusInitial
+    class="settings__button-close"
+  >
+    {{ "profile.cancel" | translate }}
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,77 @@
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header__container">
+      <div class="header__logo">
+        <a
+        type="button"
+          title="ffff"
+          (click)="toWelcomePage()"
+          class="header__logo-link">
+        <img
+          src="../../../../assets/logo.svg"
+          alt="Logo"
+          class="header__logo-svg"
+          
+        />
+        PM</a>
+      </div>
+      <div class="header__buttons-center">
+        <button
+          type="button"
+          title="{{ 'header.goToMain' }}"
+          [disabled]="!isSingIn"
+          mat-raised-button
+          (click)="goToMain()"
+        >
+          {{ "header.goToMain" | translate }}
+        </button>
+        <button
+          [disabled]="!isSingIn"
+          mat-raised-button
+          title="{{ 'header.addBoard' }}"
+          (click)="openDialogBoard()"
+        >
+          {{ "header.addBoard" | translate }}
+        </button>
+      </div>
+      <div class="header__buttons-right">
+        <button
+          [disabled]="!isSingIn"
+          mat-raised-button
+          title="{{ 'header.settingsTitle' }}"
+          mat-button
+          (click)="openProfileUser()"
+        >
+          <mat-icon class="icon"> person </mat-icon>
+        </button>
+
+        <button
+          [matMenuTriggerFor]="languageMenu"
+          mat-raised-button
+          title="{{ 'header.translation' }}"
+        >
+          <mat-icon class="icon">g_translate</mat-icon>
+          <mat-menu #languageMenu="matMenu">
+            <button mat-menu-item (click)="saveToLocal('en')">en</button>
+            <button mat-menu-item (click)="saveToLocal('ukr')">ukr</button>
+          </mat-menu>
+        </button>
+        <button
+          mat-raised-button
+          [disabled]="isSingIn"
+          routerLink="/singin"
+          title="{{ 'header.logIn' }}"
+        >
+          {{ "header.logIn" | translate }}
+        </button>
+        <button
+          mat-raised-button
+          title="{{ 'header.logOut' }}"
+          (click)="logOut()"
+        >
+          {{ "header.logOut" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

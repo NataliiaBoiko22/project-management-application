@@ -1,0 +1,123 @@
+@import "../../../../assets/utils.scss";
+:host {
+  flex: 0 0 auto;
+}
+.footer {
+  height: 80px;
+  background: $light-blue;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 10px 0;
+    font-weight: 700;
+    color: $grey;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    width: 50%;
+  }
+
+  &__author-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: $grey;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  &__github-logo {
+    width: 40px;
+    transition: 0.3s;
+    margin: 0 10px;
+  }
+  &__school {
+    margin: 10px;
+  }
+  .footer__author-git {
+    width: 20px;
+  }
+  &__year {
+    font-weight: 700;
+  }
+}
+.footer-name {
+  margin-left: 5px;
+}
+
+.rs-logo {
+  max-width: 60px;
+  transition: 0.3s;
+}
+
+.project-year {
+  text-align: center;
+}
+
+@media (min-width: 320px) {
+  .footer {
+    &__wrapper {
+      font-weight: 500;
+    }
+
+    &__author {
+      flex-direction: column;
+
+      width: 60%;
+    }
+
+    &__github-logo {
+      width: 28px;
+    }
+
+    .footer__author-git {
+      width: 20px;
+    }
+    &__year {
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+
+  .rs-logo {
+    width: 30px;
+  }
+}
+@media (min-width: 640px) {
+  .footer {
+    &__wrapper {
+      font-weight: 700;
+    }
+
+    &__author {
+      flex-direction: row;
+    }
+
+    &__github-logo {
+      width: 30px;
+    }
+
+    .footer__author-git {
+      width: 30px;
+    }
+    &__year {
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+
+  .rs-logo {
+    width: 60px;
+  }
+}

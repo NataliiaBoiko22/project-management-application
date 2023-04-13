@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-content>
+    <app-filter></app-filter>
+    <div class="main__boards">
+      <app-board-box *ngFor="let board of boardItems" [boardData]="board">
+      </app-board-box>
+      <button
+        mat-raised-button
+        title="{{ 'header.addBoard' }}"
+        (click)="openDialogBoard()"
+      >
+        {{ "header.addBoard" | translate }}
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

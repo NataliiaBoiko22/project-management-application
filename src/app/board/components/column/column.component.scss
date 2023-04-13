@@ -1,0 +1,67 @@
+@use "../../../../assets/styles/animations" as animations;
+@use "sass:color";
+@include animations.drag-and-drop-animation;
+@import "../../../../assets/utils.scss";
+
+:host {
+  display: flex;
+  position: relative;
+  color: $grey;
+  flex: none;
+  flex-direction: column;
+  width: 260px;
+  height: 100%;
+  overflow: hidden;
+  background-color: color.scale($light-grey, $alpha: -50%);
+  border-radius: 8px;
+  .inputField {
+    margin-left: -10px;
+
+    display: flex;
+    width: 240px;
+    justify-content: flex-start;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+  }
+  .column {
+    &__header {
+      height: 42px;
+      padding: 8px;
+      background-color: $blue;
+      &__header-input {
+        height: 40px;
+      }
+
+      .spacer {
+        flex: 1 2 auto;
+      }
+    }
+
+    &__container {
+      display: flex;
+
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 8px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      row-gap: 10px;
+
+      &_button-create {
+        display: block;
+
+        width: 100%;
+        min-height: 40px;
+        filter: opacity(0.5);
+        transition: filter 0.2s ease-out;
+
+        &:hover {
+          filter: opacity(0.3);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<form [formGroup]="boardsForm" class="boards-filter">
+  <h1 class="board__title">{{ "mainPage.mainPageTitle" | translate }}</h1>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ "mainPage.boardOwner" | translate }}</mat-label>
+      <mat-select formControlName="owner">
+        <mat-option [value]="">-{{ "mainPage.none" | translate }}-</mat-option>
+        <mat-option *ngFor="let user of appUsers" [value]="user._id">{{
+          user.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ "mainPage.title" | translate }}</mat-label>
+      <mat-select formControlName="title">
+        <mat-option [value]="">-{{ "mainPage.none" | translate }}-</mat-option>
+        <mat-option *ngFor="let board of appBoards" [value]="board.title">{{
+          board.title
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>

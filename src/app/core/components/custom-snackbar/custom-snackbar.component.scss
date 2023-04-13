@@ -1,0 +1,56 @@
+@import "../../../../assets/utils.scss";
+.custom-snackbar {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: $light-blue;
+  border: 2px solid $white;
+  border-radius: 8px;
+  height: 100px;
+  &__button {
+    color: $white;
+  }
+  .mat-icon {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: $white;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
+  button {
+    color: $white;
+    padding: 8px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+}
+@media (min-width: 320px) {
+  .custom-snackbar {
+    width: 240px;
+    font-size: 14px;
+    &__button {
+      font-size: 14px;
+    }
+    .mat-icon {
+      font-size: 14px;
+      height: 14px;
+      width: 14px;
+    }
+  }
+}
+@media (min-width: 640px) {
+  .custom-snackbar {
+    width: 300px;
+    font-size: 16px;
+    &__button {
+      font-size: 18px;
+    }
+    .mat-icon {
+      font-size: 18px;
+      height: 18px;
+      width: 18px;
+    }
+  }
+} ;

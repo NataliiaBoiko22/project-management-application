@@ -1,0 +1,35 @@
+@use "../../../../assets/styles/animations" as animations;
+@use "sass:color";
+
+@import "../../../../assets/utils.scss";
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  .board-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 360px;
+    height: 100%;
+    color: $grey;
+    overflow: hidden;
+    @include animations.hover-scale(1.05);
+
+    &__button {
+      background-color: $light-blue;
+      @include animations.hover-scale(1.1);
+    }
+  }
+}
+mat-card {
+  border: 2px solid $light-blue;
+  border-bottom: none;
+  word-break: break-word;
+  background-color: color.scale($light-blue, $alpha: -60%);
+}

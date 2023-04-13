@@ -1,0 +1,16 @@
+@import "../../../../assets/utils.scss";
+
+:host {
+  margin: 20px;
+  flex: 1 0 auto;
+  background-color: $white;
+  .sad-face {
+    width: 200px;
+    height: auto;
+  }
+
+  .par {
+    font-size: 36px;
+    color: $blue;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="board__controls">
+  <button type="button" mat-raised-button (click)="goToMain()">
+    <mat-icon> arrow_back </mat-icon>
+  </button>
+
+  <button type="button" mat-raised-button (click)="openDialogColumn()">
+    {{ "boardPage.createColumn" | translate }}
+  </button>
+</div>
+
+<div
+  class="board__container"
+  cdkDropListOrientation="horizontal"
+  cdkScrollable
+  cdkDropList
+  cdkDropListAutoScrollStep="15"
+  (cdkDropListDropped)="drop($event)"
+>
+  <app-column
+    *ngFor="let column of columns"
+    cdkDrag
+    [columnData]="column"
+    [columnsIds]="getArrColId()"
+    [boardId]="boardId"
+  >
+  </app-column>
+
+  <button
+    type="button"
+    mat-raised-button
+    class="board__button-create"
+    (click)="openDialogColumn()"
+  >
+    {{ "boardPage.createColumn" | translate }}
+  </button>
+</div>

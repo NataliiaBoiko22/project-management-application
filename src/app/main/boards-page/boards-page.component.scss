@@ -1,0 +1,20 @@
+@use "../../../assets/styles/layout" as layout;
+@import "../../../assets/utils.scss";
+:host {
+  @include layout.align-center;
+
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1600px;
+}
+.tasks {
+  &__container {
+    @include layout.responsive-grid;
+  }
+}
+
+.main {
+  &__boards {
+    @include layout.responsive-grid;
+  }
+}

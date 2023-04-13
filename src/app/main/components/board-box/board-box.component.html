@@ -1,0 +1,19 @@
+<mat-card class="board-item" (click)="navigate()">
+  <mat-card-header>
+    <mat-card-title>
+      {{ boardData.title }}
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-actions align="end">
+    <button
+      title="button"
+      mat-icon-button
+      class="board-item__button"
+      type="button"
+      (click)="openDialog($event)"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

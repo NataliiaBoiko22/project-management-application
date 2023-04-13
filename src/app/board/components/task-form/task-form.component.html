@@ -1,0 +1,54 @@
+<form [formGroup]="formGroup" class="task-form">
+  <h2 class="task-form-title">{{ "boardPage.createTask" | translate }}</h2>
+  <div class="task-form">
+    <mat-form-field appearance="outline">
+      <mat-label>{{ "boardPage.taskTitle" }}</mat-label>
+      <input
+        matInput
+        placeholder="{{ 'boardPage.enterTaskTitlePlaceholder' | translate }}"
+        type="text"
+        formControlName="title"
+        class="form-control"
+      />
+      <mat-error *ngIf="formGroup.get('title')?.errors?.['required']">
+        {{ "boardPage.enterTaskTitlePlaceholder" | translate }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>{{ "boardPage.taskDescription" | translate }}</mat-label>
+      <input
+        matInput
+        placeholder="{{
+          'boardPage.enterTaskDescriptionPlaceholder' | translate
+        }}"
+        formControlName="description"
+        type="text"
+        class="form-control"
+      />
+      <mat-error *ngIf="formGroup.get('description')?.errors?.['required']">
+        {{ "boardPage.enterTaskDescriptionPlaceholder" | translate }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <mat-dialog-actions>
+    <button
+      mat-raised-button
+      [disabled]="formGroup.invalid"
+      class="task-form__button"
+      [mat-dialog-close]="true"
+      type="button"
+      (click)="createTask()"
+    >
+      {{ "boardPage.createTask" | translate }}
+    </button>
+    <button
+      mat-raised-button
+      class="task-form__button-close"
+      [mat-dialog-close]="true"
+      type="button"
+      (click)="closeModal()"
+    >
+      {{ "boardPage.cancel" | translate }}
+    </button>
+  </mat-dialog-actions>
+</form>
